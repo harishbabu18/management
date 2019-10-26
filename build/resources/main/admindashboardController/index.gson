@@ -1,0 +1,8 @@
+import usermanagement.AdmindashboardController
+
+model {
+	Iterable<AdmindashboardController> admindashboardControllerList
+}
+
+json tmpl.admindashboardController(admindashboardControllerList ?: [])
+

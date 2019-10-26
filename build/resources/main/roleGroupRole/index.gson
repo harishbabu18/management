@@ -1,0 +1,8 @@
+import usermanagement.RoleGroupRole
+
+model {
+	Iterable<RoleGroupRole> roleGroupRoleList
+}
+
+json tmpl.roleGroupRole(roleGroupRoleList ?: [])
+

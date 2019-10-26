@@ -10,9 +10,9 @@ grails:
             events: false
 info:
     app:
-        name: '@info.app.name@'
-        version: '@info.app.version@'
-        grailsVersion: '@info.app.grailsVersion@'
+        name: 'management'
+        version: '0.1'
+        grailsVersion: '4.0.1'
 spring:
     jmx:
         unique-names: true
