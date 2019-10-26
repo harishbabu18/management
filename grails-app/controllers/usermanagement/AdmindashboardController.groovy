@@ -10,7 +10,7 @@ class AdmindashboardController {
 	
     def index() {
         def compainesRegistered = Company.count()
-        def userRegisterd = 30000
+        def userRegisterd = User.count()
         def companyusersOnline = 200
         def usersOnline = 4000
         [harish :compainesRegistered,
