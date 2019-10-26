@@ -1,0 +1,7 @@
+import usermanagement.RoleGroupRole
+
+model {
+	RoleGroupRole roleGroupRole
+}
+
+json g.render(roleGroupRole, [resolveTemplate: false])

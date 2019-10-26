@@ -1,0 +1,6 @@
+company.$CompanyServiceImplementation
+usermanagement.$RoleGroupRoleServiceImplementation
+usermanagement.$RoleGroupServiceImplementation
+usermanagement.$RoleServiceImplementation
+usermanagement.$UserRoleGroupServiceImplementation
+usermanagement.$UserServiceImplementation

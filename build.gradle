@@ -56,7 +56,14 @@ dependencies {
     console "org.grails:grails-console"
     profile "org.grails.profiles:rest-api"
     runtime "org.glassfish.web:el-impl:2.1.2-b03"
-    runtime "com.h2database:h2"
+    //Mysql
+    runtime "mysql:mysql-connector-java:5.1.46"
+    //Spring Security Core
+    compile "org.grails.plugins:spring-security-core:4.0.0.RC2"
+    //Spring Security Rest
+    compile "org.grails.plugins:spring-security-rest:3.0.0.RC1"
+
+
     runtime "org.apache.tomcat:tomcat-jdbc"
     runtime "javax.xml.bind:jaxb-api:2.3.0"
     testCompile "org.grails:grails-gorm-testing-support"

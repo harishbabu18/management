@@ -1,0 +1,7 @@
+import usermanagement.AdmindashboardController
+
+model {
+	AdmindashboardController admindashboardController
+}
+
+json g.render(admindashboardController, [resolveTemplate: false])
