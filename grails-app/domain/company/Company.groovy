@@ -6,9 +6,11 @@ class Company {
     Boolean verified
     Date establishedDate
     String  website
+    Boolean websiteverified
     String  address
     String  email
     String  mobile
+    Boolean mobileverified
 
     static constraints = {
     }

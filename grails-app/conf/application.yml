@@ -82,20 +82,20 @@ dataSource:
     driverClassName: com.mysql.jdbc.Driver
     dialect: org.hibernate.dialect.MySQL5InnoDBDialect
     username: root
-    password: bavana20
+    password: B@vana20
 environments:
     development:
         dataSource:
             dbCreate: update
-            url: jdbc:mysql://localhost:3306/bessppl
+            url: jdbc:mysql://localhost:3306/teraret
     test:
         dataSource:
             dbCreate: update
-            url: jdbc:mysql://localhost:3306/bessppl
+            url: jdbc:mysql://localhost:3306/teraret
     production:
         dataSource:
             dbCreate: none
-            url: jdbc:mysql://localhost:3306/bessppl
+            url: jdbc:mysql://localhost:3306/teraret
             properties:
                 jmxEnabled: true
                 initialSize: 5
