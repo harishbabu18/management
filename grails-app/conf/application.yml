@@ -97,7 +97,7 @@ environments:
     production:
         dataSource:
             dbCreate: none
-            url: jdbc:mysql://teraret-beta-instance.ct1gqorilgvy.ap-south-1.rds.amazonaws.com:3306/teraret-beta-instance
+            url: jdbc:mysql://teraret-beta-instance.ct1gqorilgvy.ap-south-1.rds.amazonaws.com:3306/teraret-beta
             properties:
                 jmxEnabled: true
                 initialSize: 5
