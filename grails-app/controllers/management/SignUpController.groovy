@@ -6,7 +6,6 @@ import grails.rest.*
 import grails.converters.*
 import grails.validation.ValidationException
 import org.apache.commons.lang3.RandomStringUtils
-import org.apache.http.impl.client.HttpClientBuilder
 import org.springframework.web.client.RestTemplate
 import usermanagement.Email
 import usermanagement.User
