@@ -1,0 +1,7 @@
+import management.OtpTypes
+
+model {
+	OtpTypes otpTypes
+}
+
+json tmpl.otpTypes(otpTypes)

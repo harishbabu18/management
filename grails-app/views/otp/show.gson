@@ -1,0 +1,7 @@
+import management.Otp
+
+model {
+	Otp otp
+}
+
+json tmpl.otp(otp)

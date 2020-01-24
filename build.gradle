@@ -62,6 +62,10 @@ dependencies {
     compile "org.grails.plugins:spring-security-core:4.0.0.RC2"
     //Spring Security Rest
     compile "org.grails.plugins:spring-security-rest:3.0.0.RC1"
+    //AWS SDK
+    //compile group: 'com.amazonaws', name: 'aws-java-sdk', version: '1.11.710'
+    //AWS SES
+    //compile group: 'com.amazonaws', name: 'aws-java-sdk-ses', version: '1.11.710'
 
 
     runtime "org.apache.tomcat:tomcat-jdbc"

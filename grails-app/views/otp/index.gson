@@ -1,0 +1,8 @@
+import management.Otp
+
+model {
+	Iterable<Otp> otpList
+}
+
+json tmpl.otp(otpList ?: [])
+

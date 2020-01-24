@@ -69,7 +69,9 @@ grails:
         defaultScope: singleton
     converters:
         encoding: UTF-8
-
+---
+server:
+ port: 80
 ---
 hibernate:
     cache:

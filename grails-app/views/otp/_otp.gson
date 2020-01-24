@@ -1,0 +1,7 @@
+import management.Otp
+
+model {
+	Otp otp
+}
+
+json g.render(otp, [resolveTemplate: false])

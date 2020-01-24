@@ -49,6 +49,62 @@ LOCK TABLES `company` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `otp`
+--
+
+DROP TABLE IF EXISTS `otp`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `otp` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `version` bigint(20) NOT NULL,
+  `user_id` bigint(20) NOT NULL,
+  `otp` varchar(255) NOT NULL,
+  `otp_types_id` bigint(20) NOT NULL,
+  `verifydone` bit(1) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKdrrkob03otk15fxe9b0bkkp35` (`user_id`),
+  KEY `FKirgv4nfddgy924aia48qpx71v` (`otp_types_id`),
+  CONSTRAINT `FKdrrkob03otk15fxe9b0bkkp35` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
+  CONSTRAINT `FKirgv4nfddgy924aia48qpx71v` FOREIGN KEY (`otp_types_id`) REFERENCES `otp_types` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `otp`
+--
+
+LOCK TABLES `otp` WRITE;
+/*!40000 ALTER TABLE `otp` DISABLE KEYS */;
+/*!40000 ALTER TABLE `otp` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `otp_types`
+--
+
+DROP TABLE IF EXISTS `otp_types`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `otp_types` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `version` bigint(20) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `otp_types`
+--
+
+LOCK TABLES `otp_types` WRITE;
+/*!40000 ALTER TABLE `otp_types` DISABLE KEYS */;
+INSERT INTO `otp_types` VALUES (1,0,'SIGNUP'),(2,0,'FORGOTPASSWORD'),(3,0,'MOBILEVERIFY'),(4,0,'VERIFYIP');
+/*!40000 ALTER TABLE `otp_types` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `profile`
 --
 
@@ -255,4 +311,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-01-21 14:02:52
+-- Dump completed on 2020-01-21 23:01:06

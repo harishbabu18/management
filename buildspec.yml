@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto8
+  build:
+    commands:
+      - echo Build started on `date`
+      - gradle assemble
+artifacts:
+  files:
+    - build/libs/management-0.1.war
+  discard-paths: yes
