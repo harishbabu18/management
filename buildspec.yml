@@ -11,4 +11,5 @@ phases:
 artifacts:
   files:
     - build/libs/management-0.1.war
+    - appspec.yml
   discard-paths: yes
