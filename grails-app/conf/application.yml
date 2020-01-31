@@ -71,7 +71,7 @@ grails:
         encoding: UTF-8
 ---
 server:
- port: 80
+ port: 8080
 ---
 hibernate:
     cache:

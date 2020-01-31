@@ -11,66 +11,64 @@ import grails.gorm.transactions.ReadOnly
 import grails.gorm.transactions.Transactional
 
 @ReadOnly
-class CompanyController {
+class AddressController {
 
-    CompanyService companyService
+    AddressService addressService
 
     static responseFormats = ['json', 'xml']
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond companyService.list(params), model:[companyCount: companyService.count()]
+        respond addressService.list(params), model:[addressCount: addressService.count()]
     }
 
     def show(Long id) {
-        respond companyService.get(id)
+        respond addressService.get(id)
     }
 
     @Transactional
-    def save(Company company) {
-        company.entrydate=new Date()
-        company.isDeleted=false
-        if (company == null) {
+    def save(Address address) {
+        if (address == null) {
             render status: NOT_FOUND
             return
         }
-        if (company.hasErrors()) {
+        if (address.hasErrors()) {
             transactionStatus.setRollbackOnly()
-            respond company.errors
+            respond address.errors
             return
         }
 
         try {
-            companyService.save(company)
+            addressService.save(address)
         } catch (ValidationException e) {
-            respond company.errors
+            respond address.errors
             return
         }
 
-        respond company, [status: CREATED, view:"show"]
+        respond address, [status: CREATED, view:"show"]
     }
 
     @Transactional
-    def update(Company company) {
-        if (company == null) {
+    def update(Address address) {
+        if (address == null) {
             render status: NOT_FOUND
             return
         }
-        if (company.hasErrors()) {
+        if (address.hasErrors()) {
             transactionStatus.setRollbackOnly()
-            respond company.errors
+            respond address.errors
             return
         }
 
         try {
-            companyService.save(company)
+            addressService.save(address)
         } catch (ValidationException e) {
-            respond company.errors
+            respond address.errors
             return
         }
 
-        respond company, [status: OK, view:"show"]
+        respond address, [status: OK, view:"show"]
     }
 
     @Transactional
@@ -80,7 +78,7 @@ class CompanyController {
             return
         }
 
-        companyService.delete(id)
+        addressService.delete(id)
 
         render status: NO_CONTENT
     }

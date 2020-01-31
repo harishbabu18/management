@@ -1,0 +1,7 @@
+import company.Contact
+
+model {
+	Contact contact
+}
+
+json g.render(contact, [resolveTemplate: false])

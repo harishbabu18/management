@@ -3,15 +3,15 @@ package company
 class Company {
     String name
     String description
-    Boolean verified
     Date establishedDate
-    String  website
-    Boolean websiteverified
-    String  address
-    String  email
-    String  mobile
-    Boolean mobileverified
+    Date entrydate
+    Boolean isDeleted
 
     static constraints = {
+        name unique:true
+        description nullable: true, blank: true
+        establishedDate nullable: true, blank: true
+        entrydate nullable: true, blank: true
+        isDeleted nullable: true, blank: true
     }
 }

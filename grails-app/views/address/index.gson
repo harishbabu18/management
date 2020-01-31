@@ -1,0 +1,8 @@
+import company.Address
+
+model {
+	Iterable<Address> addressList
+}
+
+json tmpl.address(addressList ?: [])
+

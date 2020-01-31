@@ -1,0 +1,7 @@
+import company.Address
+
+model {
+	Address address
+}
+
+json g.render(address, [resolveTemplate: false])
