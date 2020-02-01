@@ -1,0 +1,8 @@
+import company.OfficeType
+
+model {
+	Iterable<OfficeType> officeTypeList
+}
+
+json tmpl.officeType(officeTypeList ?: [])
+

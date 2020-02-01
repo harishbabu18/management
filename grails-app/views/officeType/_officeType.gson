@@ -1,0 +1,7 @@
+import company.OfficeType
+
+model {
+	OfficeType officeType
+}
+
+json g.render(officeType, [resolveTemplate: false])
