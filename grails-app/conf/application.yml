@@ -73,6 +73,10 @@ grails:
 server:
  port: 8080
 ---
+grails:
+    cors:
+      enabled: true
+---
 hibernate:
     cache:
         queries: false
