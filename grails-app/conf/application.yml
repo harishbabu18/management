@@ -84,7 +84,7 @@ dataSource:
     driverClassName: com.mysql.jdbc.Driver
     dialect: org.hibernate.dialect.MySQL5InnoDBDialect
     username: harishbabu
-    password: Bavana20
+    password: B@vana20
 environments:
     development:
         dataSource:

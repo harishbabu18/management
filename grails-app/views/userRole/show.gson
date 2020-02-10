@@ -1,0 +1,7 @@
+import usermanagement.UserRole
+
+model {
+	UserRole userRole
+}
+
+json tmpl.userRole(userRole)

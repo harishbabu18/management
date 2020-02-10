@@ -1,7 +1,0 @@
-import usermanagement.RoleGroup
-
-model {
-	RoleGroup roleGroup
-}
-
-json tmpl.roleGroup(roleGroup)

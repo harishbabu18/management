@@ -11,64 +11,64 @@ import grails.gorm.transactions.ReadOnly
 import grails.gorm.transactions.Transactional
 
 @ReadOnly
-class UserRoleGroupController {
+class UserRoleController {
 
-    UserRoleGroupService userRoleGroupService
+    UserRoleService userRoleService
 
     static responseFormats = ['json', 'xml']
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond userRoleGroupService.list(params), model:[userRoleGroupCount: userRoleGroupService.count()]
+        respond userRoleService.list(params), model:[userRoleCount: userRoleService.count()]
     }
 
     def show(Long id) {
-        respond userRoleGroupService.get(id)
+        respond userRoleService.get(id)
     }
 
     @Transactional
-    def save(UserRoleGroup userRoleGroup) {
-        if (userRoleGroup == null) {
+    def save(UserRole userRole) {
+        if (userRole == null) {
             render status: NOT_FOUND
             return
         }
-        if (userRoleGroup.hasErrors()) {
+        if (userRole.hasErrors()) {
             transactionStatus.setRollbackOnly()
-            respond userRoleGroup.errors
+            respond userRole.errors
             return
         }
 
         try {
-            userRoleGroupService.save(userRoleGroup)
+            userRoleService.save(userRole)
         } catch (ValidationException e) {
-            respond userRoleGroup.errors
+            respond userRole.errors
             return
         }
 
-        respond userRoleGroup, [status: CREATED, view:"show"]
+        respond userRole, [status: CREATED, view:"show"]
     }
 
     @Transactional
-    def update(UserRoleGroup userRoleGroup) {
-        if (userRoleGroup == null) {
+    def update(UserRole userRole) {
+        if (userRole == null) {
             render status: NOT_FOUND
             return
         }
-        if (userRoleGroup.hasErrors()) {
+        if (userRole.hasErrors()) {
             transactionStatus.setRollbackOnly()
-            respond userRoleGroup.errors
+            respond userRole.errors
             return
         }
 
         try {
-            userRoleGroupService.save(userRoleGroup)
+            userRoleService.save(userRole)
         } catch (ValidationException e) {
-            respond userRoleGroup.errors
+            respond userRole.errors
             return
         }
 
-        respond userRoleGroup, [status: OK, view:"show"]
+        respond userRole, [status: OK, view:"show"]
     }
 
     @Transactional
@@ -78,7 +78,7 @@ class UserRoleGroupController {
             return
         }
 
-        userRoleGroupService.delete(id)
+        userRoleService.delete(id)
 
         render status: NO_CONTENT
     }
