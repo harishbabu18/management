@@ -1,0 +1,7 @@
+import company.Task
+
+model {
+	Task task
+}
+
+json tmpl.task(task)

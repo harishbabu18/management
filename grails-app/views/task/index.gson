@@ -1,0 +1,8 @@
+import company.Task
+
+model {
+	Iterable<Task> taskList
+}
+
+json tmpl.task(taskList ?: [])
+

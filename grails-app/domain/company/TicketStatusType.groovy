@@ -1,6 +1,6 @@
 package company
 
-class TicketType {
+class TicketStatusType {
     String name
 
     static constraints = {

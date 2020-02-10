@@ -1,0 +1,7 @@
+import company.TicketSource
+
+model {
+	TicketSource ticketSource
+}
+
+json g.render(ticketSource, [resolveTemplate: false])

@@ -13,6 +13,8 @@ class Profile {
     String mobile
     String termoraryaddress
     String permanentaddress
+    Date dateCreated
+    Date lastUpdated
 
     static constraints = {
     }

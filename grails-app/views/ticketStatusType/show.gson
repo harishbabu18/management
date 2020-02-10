@@ -1,0 +1,7 @@
+import company.TicketStatusType
+
+model {
+	TicketStatusType ticketStatusType
+}
+
+json tmpl.ticketStatusType(ticketStatusType)

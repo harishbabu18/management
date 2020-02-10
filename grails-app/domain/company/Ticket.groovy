@@ -5,7 +5,7 @@ class Ticket {
     boolean urgent
     boolean important
     TicketSource ticketSource
-    TicketType ticketType
+    TicketStatusType ticketStatus
     Employee employee
     Company company
     Contact contact

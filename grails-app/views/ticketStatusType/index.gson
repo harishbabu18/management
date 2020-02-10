@@ -1,0 +1,8 @@
+import company.TicketStatusType
+
+model {
+	Iterable<TicketStatusType> ticketStatusTypeList
+}
+
+json tmpl.ticketStatusType(ticketStatusTypeList ?: [])
+
