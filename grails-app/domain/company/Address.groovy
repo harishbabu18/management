@@ -8,6 +8,10 @@ class Address {
     String state
     String zip
     OfficeType officeType
+
+    Date dateCreated
+    Date lastUpdated
+
     Boolean isDeleted
 
     static constraints = {

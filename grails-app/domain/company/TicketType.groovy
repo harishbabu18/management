@@ -1,10 +1,9 @@
 package company
 
-class OfficeType {
+class TicketType {
     String name
-    Date dateCreated
-    Date lastUpdated
 
     static constraints = {
+        name unique:true
     }
 }

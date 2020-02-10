@@ -6,6 +6,8 @@ class Contact {
     String mobile
     String website
     String fax
+    Date dateCreated
+    Date lastUpdated
     Boolean isDeleted
 
 
