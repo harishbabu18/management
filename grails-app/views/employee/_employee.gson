@@ -1,0 +1,7 @@
+import company.Employee
+
+model {
+	Employee employee
+}
+
+json g.render(employee, [resolveTemplate: false])

@@ -4,4 +4,12 @@ model {
 	Task task
 }
 
-json g.render(task, [resolveTemplate: false])
+
+   json{
+     id task.id
+     ticket task.ticket.id
+     assignedTo task.assignedTo.firstName
+     assignedBy task.assignedBy.firstName
+     personalNote task.personalNote
+     publicMessage task.publicMessage
+     }

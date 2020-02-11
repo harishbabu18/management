@@ -1,0 +1,7 @@
+import company.Employee
+
+model {
+	Employee employee
+}
+
+json tmpl.employee(employee)

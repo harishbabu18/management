@@ -4,4 +4,16 @@ model {
 	Ticket ticket
 }
 
-json g.render(ticket, [resolveTemplate: false])
+json {
+id ticket.id
+ticket "Ticket-"+ticket.id
+description ticket.description
+contact ticket.contact.firstName
+ticketStatus ticket.ticketStatus.name
+ticketSource ticket.ticketSource.name
+createdBy ticket.cratedBy.firstName
+assignedTo ticket.assignedTo.firstName
+}
+
+
+

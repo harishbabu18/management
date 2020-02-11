@@ -11,64 +11,64 @@ import grails.gorm.transactions.ReadOnly
 import grails.gorm.transactions.Transactional
 
 @ReadOnly
-class CompanyController {
+class EmployeeController {
 
-    CompanyService companyService
+    EmployeeService employeeService
 
     static responseFormats = ['json', 'xml']
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond companyService.list(params), model:[companyCount: companyService.count()]
+        respond employeeService.list(params), model:[employeeCount: employeeService.count()]
     }
 
     def show(Long id) {
-        respond companyService.get(id)
+        respond employeeService.get(id)
     }
 
     @Transactional
-    def save(Company company) {
-        if (company == null) {
+    def save(Employee employee) {
+        if (employee == null) {
             render status: NOT_FOUND
             return
         }
-        if (company.hasErrors()) {
+        if (employee.hasErrors()) {
             transactionStatus.setRollbackOnly()
-            respond company.errors
+            respond employee.errors
             return
         }
 
         try {
-            companyService.save(company)
+            employeeService.save(employee)
         } catch (ValidationException e) {
-            respond company.errors
+            respond employee.errors
             return
         }
 
-        respond company, [status: CREATED, view:"show"]
+        respond employee, [status: CREATED, view:"show"]
     }
 
     @Transactional
-    def update(Company company) {
-        if (company == null) {
+    def update(Employee employee) {
+        if (employee == null) {
             render status: NOT_FOUND
             return
         }
-        if (company.hasErrors()) {
+        if (employee.hasErrors()) {
             transactionStatus.setRollbackOnly()
-            respond company.errors
+            respond employee.errors
             return
         }
 
         try {
-            companyService.save(company)
+            employeeService.save(employee)
         } catch (ValidationException e) {
-            respond company.errors
+            respond employee.errors
             return
         }
 
-        respond company, [status: OK, view:"show"]
+        respond employee, [status: OK, view:"show"]
     }
 
     @Transactional
@@ -78,7 +78,7 @@ class CompanyController {
             return
         }
 
-        companyService.delete(id)
+        employeeService.delete(id)
 
         render status: NO_CONTENT
     }
