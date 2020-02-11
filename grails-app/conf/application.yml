@@ -88,16 +88,16 @@ dataSource:
     driverClassName: com.mysql.jdbc.Driver
     dialect: org.hibernate.dialect.MySQL5InnoDBDialect
     username: harishbabu
-    password: B@vana20
+    password: Bavana20
 environments:
     development:
         dataSource:
             dbCreate: update
-            url: jdbc:mysql://localhost:3306/teraret
+            url: jdbc:mysql://teraret-beta-instance.ct1gqorilgvy.ap-south-1.rds.amazonaws.com:3306/teraret-beta
     test:
         dataSource:
             dbCreate: update
-            url: jdbc:mysql://localhost:3306/teraret
+            url: jdbc:mysql://teraret-beta-instance.ct1gqorilgvy.ap-south-1.rds.amazonaws.com:3306/teraret-beta
     production:
         dataSource:
             dbCreate: none
