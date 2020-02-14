@@ -1,0 +1,7 @@
+import company.Ticket
+
+model {
+	Ticket ticket
+}
+
+json tmpl.ticket(ticket)

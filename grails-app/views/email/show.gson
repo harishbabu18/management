@@ -1,0 +1,7 @@
+import company.Email
+
+model {
+	Email email
+}
+
+json tmpl.email(email)

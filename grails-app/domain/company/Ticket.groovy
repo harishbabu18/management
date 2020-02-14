@@ -6,7 +6,7 @@ class Ticket {
     boolean important
     TicketSource ticketSource
     TicketStatusType ticketStatus
-    Employee cratedBy
+    Employee createdBy
     Employee assignedTo
     Company company
     Contact contact

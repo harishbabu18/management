@@ -1,0 +1,7 @@
+import company.Email
+
+model {
+	Email email
+}
+
+json g.render(email, [resolveTemplate: false])

@@ -1,5 +1,6 @@
 package management
 
+import company.Contact
 import company.Position
 import company.TicketSource
 import company.TicketStatusType
@@ -51,6 +52,8 @@ class BootStrap {
         new TicketSource(name: "Phone Call").save()
         new TicketSource(name: "App").save()
         new TicketSource(name: "Mail").save()
+
+        new Contact(firstName:"Comapany",lastName:"Comapany", ).save()
 
 
 

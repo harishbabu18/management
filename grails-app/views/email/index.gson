@@ -1,0 +1,8 @@
+import company.Email
+
+model {
+	Iterable<Email> emailList
+}
+
+json tmpl.email(emailList ?: [])
+

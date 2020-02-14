@@ -1,7 +1,0 @@
-import usermanagement.AdmindashboardController
-
-model {
-	AdmindashboardController admindashboardController
-}
-
-json tmpl.admindashboardController(admindashboardController)

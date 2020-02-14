@@ -4,4 +4,11 @@ model {
 	Contact contact
 }
 
-json g.render(contact, [resolveTemplate: false])
+ json{
+     id contact.id
+     company contact.company.name
+     firstName contact.firstName
+     lastName  contact.lastName
+     position contact.position.name
+     dob contact.dob
+     }
