@@ -4,4 +4,11 @@ model {
 	Transport transport
 }
 
-json g.render(transport, [resolveTemplate: false])
+json {
+id transport.id
+loading transport.loading.addresslineone
+unloading transport.loading.addresslineone
+schedule transport.schedule
+dateCreated transport.dateCreated
+lastUpdated transport.lastUpdated
+}
