@@ -1,0 +1,7 @@
+import Inventory.ProductName
+
+model {
+	ProductName productName
+}
+
+json g.render(productName, [resolveTemplate: false])

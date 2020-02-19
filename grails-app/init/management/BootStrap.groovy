@@ -1,5 +1,6 @@
 package management
 
+import Inventory.QuantityType
 import company.Contact
 import company.Position
 import company.TicketSource
@@ -54,6 +55,13 @@ class BootStrap {
         new TicketSource(name: "Mail").save()
 
         new Contact(firstName:"Comapany",lastName:"Comapany", ).save()
+
+        new QuantityType(name:"Kg").save()
+        new QuantityType(name:"Grams").save()
+        new QuantityType(name:"Lbs").save()
+        new QuantityType(name:"Floz").save()
+        new QuantityType(name:"Liter").save()
+
 
 
 

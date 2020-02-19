@@ -1,0 +1,7 @@
+import Inventory.QuantityType
+
+model {
+	QuantityType quantityType
+}
+
+json g.render(quantityType, [resolveTemplate: false])
