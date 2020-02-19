@@ -1,14 +1,18 @@
 package Inventory
 
-class ProductName {
-    String name
+import company.Address
+
+
+
+class Transport {
+    Address loading
+    Address unloading
+    Date schedule
+    static hasMany = [inventory: Inventory]
     Date dateCreated
     Date lastUpdated
     Boolean isDeleted
-
     static constraints = {
-        name  unique:true
         isDeleted nullable: true, blank: true
-
     }
 }

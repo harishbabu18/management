@@ -2,6 +2,7 @@ package management
 
 import Inventory.QuantityType
 import company.Contact
+import company.OfficeType
 import company.Position
 import company.TicketSource
 import company.TicketStatusType
@@ -61,6 +62,13 @@ class BootStrap {
         new QuantityType(name:"Lbs").save()
         new QuantityType(name:"Floz").save()
         new QuantityType(name:"Liter").save()
+
+        new OfficeType(name:"REGISTERED OFFICE").save()
+        new OfficeType(name: "WARE HOUSE").save()
+        new OfficeType(name: "HEAD QUATERS").save()
+        new OfficeType(name: "OTHERS").save()
+
+
 
 
 

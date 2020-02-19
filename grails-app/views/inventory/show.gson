@@ -1,0 +1,7 @@
+import Inventory.Inventory
+
+model {
+	Inventory inventory
+}
+
+json tmpl.inventory(inventory)

@@ -11,64 +11,64 @@ import grails.gorm.transactions.ReadOnly
 import grails.gorm.transactions.Transactional
 
 @ReadOnly
-class ProductController {
+class TransportController {
 
-    ProductService productService
+    TransportService transportService
 
     static responseFormats = ['json', 'xml']
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond productService.list(params), model:[productCount: productService.count()]
+        respond transportService.list(params), model:[transportCount: transportService.count()]
     }
 
     def show(Long id) {
-        respond productService.get(id)
+        respond transportService.get(id)
     }
 
     @Transactional
-    def save(Product product) {
-        if (product == null) {
+    def save(Transport transport) {
+        if (transport == null) {
             render status: NOT_FOUND
             return
         }
-        if (product.hasErrors()) {
+        if (transport.hasErrors()) {
             transactionStatus.setRollbackOnly()
-            respond product.errors
+            respond transport.errors
             return
         }
 
         try {
-            productService.save(product)
+            transportService.save(transport)
         } catch (ValidationException e) {
-            respond product.errors
+            respond transport.errors
             return
         }
 
-        respond product, [status: CREATED, view:"show"]
+        respond transport, [status: CREATED, view:"show"]
     }
 
     @Transactional
-    def update(Product product) {
-        if (product == null) {
+    def update(Transport transport) {
+        if (transport == null) {
             render status: NOT_FOUND
             return
         }
-        if (product.hasErrors()) {
+        if (transport.hasErrors()) {
             transactionStatus.setRollbackOnly()
-            respond product.errors
+            respond transport.errors
             return
         }
 
         try {
-            productService.save(product)
+            transportService.save(transport)
         } catch (ValidationException e) {
-            respond product.errors
+            respond transport.errors
             return
         }
 
-        respond product, [status: OK, view:"show"]
+        respond transport, [status: OK, view:"show"]
     }
 
     @Transactional
@@ -78,7 +78,7 @@ class ProductController {
             return
         }
 
-        productService.delete(id)
+        transportService.delete(id)
 
         render status: NO_CONTENT
     }

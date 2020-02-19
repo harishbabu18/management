@@ -6,5 +6,6 @@ class OfficeType {
     Date lastUpdated
 
     static constraints = {
+        name unique:true
     }
 }

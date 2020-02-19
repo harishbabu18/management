@@ -1,0 +1,7 @@
+import Inventory.Transport
+
+model {
+	Transport transport
+}
+
+json g.render(transport, [resolveTemplate: false])

@@ -1,0 +1,8 @@
+import Inventory.Transport
+
+model {
+	Iterable<Transport> transportList
+}
+
+json tmpl.transport(transportList ?: [])
+
