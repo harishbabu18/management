@@ -1,5 +1,4 @@
 package Inventory
-import company.Address
 import usermanagement.User
 
 class Inventory {
@@ -20,6 +19,7 @@ class Inventory {
 
     static constraints = {
         barcode unique:true
+        lot nullable:true
         isDeleted nullable: true, blank: true
     }
 
