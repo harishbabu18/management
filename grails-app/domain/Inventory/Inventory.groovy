@@ -9,11 +9,11 @@ class Inventory {
     Integer number
     Double quantity
     Double price
+    User createBy
+    Lot lot
     Date dateCreated
     Date lastUpdated
     Boolean isDeleted
-    User createBy
-    Address address
 //    static hasMany = [transport: Transport]
 //    static belongsTo = [transport: Transport]
 

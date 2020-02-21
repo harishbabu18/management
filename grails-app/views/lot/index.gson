@@ -1,0 +1,8 @@
+import Inventory.Lot
+
+model {
+	Iterable<Lot> lotList
+}
+
+json tmpl.lot(lotList ?: [])
+
