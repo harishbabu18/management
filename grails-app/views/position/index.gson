@@ -1,0 +1,8 @@
+import company.Position
+
+model {
+	Iterable<Position> positionList
+}
+
+json tmpl.position(positionList ?: [])
+
