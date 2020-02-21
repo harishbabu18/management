@@ -19,7 +19,7 @@ class Inventory {
 
     static constraints = {
         barcode unique:true
-        lot nullable:true
+        lot nullable:true, blank:true
         isDeleted nullable: true, blank: true
     }
 
