@@ -13,7 +13,9 @@ quantity inventory.quantity
 price inventory.price
 dateCreated inventory.dateCreated
 lastUpdated inventory.lastUpdated
-address inventory.address.addresslineone
+lot inventory.lot.lotname
+expiryDate inventory.lot.expiryDate
+note inventory.lot.note
 isDeleted inventory.isDeleted
 createBy inventory.createBy.username
 
