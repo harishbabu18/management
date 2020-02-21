@@ -8,7 +8,7 @@ class Transport {
     Address loading
     Address unloading
     Date schedule
-    static hasMany = [inventory: Inventory]
+  //  static hasMany = [inventory: Inventory]
     Date dateCreated
     Date lastUpdated
     Boolean isDeleted

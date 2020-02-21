@@ -6,6 +6,7 @@ class Inventory {
     ProductName name
     String barcode
     QuantityType quantityType
+    Integer number
     Double quantity
     Double price
     Date dateCreated
@@ -13,8 +14,8 @@ class Inventory {
     Boolean isDeleted
     User createBy
     Address address
-    static hasMany = [transport: Transport]
-    static belongsTo = [transport: Transport]
+//    static hasMany = [transport: Transport]
+//    static belongsTo = [transport: Transport]
 
 
     static constraints = {
