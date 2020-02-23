@@ -1,14 +1,9 @@
 package Inventory
 
-import company.Address
-
-
-
-class Transport {
-    Address loading
-    Address unloading
-    Date schedule
-  //  static hasMany = [inventory: Inventory]
+class Lot {
+    String lotname
+    Date expiryDate
+    String note
     Date dateCreated
     Date lastUpdated
     Boolean isDeleted

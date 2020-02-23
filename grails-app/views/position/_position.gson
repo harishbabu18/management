@@ -1,0 +1,7 @@
+import company.Position
+
+model {
+	Position position
+}
+
+json g.render(position, [resolveTemplate: false])
