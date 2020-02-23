@@ -1,0 +1,8 @@
+import company.Services
+
+model {
+	Iterable<Services> servicesList
+}
+
+json tmpl.services(servicesList ?: [])
+
