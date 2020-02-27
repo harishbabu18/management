@@ -1,6 +1,8 @@
 package company
 
 import grails.validation.ValidationException
+import usermanagement.User
+
 import static org.springframework.http.HttpStatus.CREATED
 import static org.springframework.http.HttpStatus.NOT_FOUND
 import static org.springframework.http.HttpStatus.NO_CONTENT

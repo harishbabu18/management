@@ -4,4 +4,20 @@ model {
 	Company company
 }
 
-json g.render(company, [resolveTemplate: false])
+json {
+      id company.id
+      name company.name
+     description company.description
+     establishedDate company.establishedDate
+     dateCreated company.dateCreated
+     lastUpdated company.lastUpdated
+     email company.email
+     fax company.fax
+     website company.website
+     officeType company.officeType.name
+     addresslineone company.addresslineone
+     addresslinetwo company.addresslinetwo
+     country company.country
+     state company.state
+     zip company.zip
+}
