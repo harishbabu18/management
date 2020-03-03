@@ -16,5 +16,6 @@ class Employee {
     Date lastUpdated
 
     static constraints = {
+        profilepic nullable:true, blank:true
     }
 }

@@ -1,0 +1,7 @@
+import company.Offering
+
+model {
+	Offering offering
+}
+
+json tmpl.offering(offering)

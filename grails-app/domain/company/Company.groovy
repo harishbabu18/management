@@ -3,6 +3,7 @@ package company
 import usermanagement.User
 
 class Company {
+    String profilepic
     String name
     String description
     Date establishedDate
@@ -21,6 +22,7 @@ class Company {
     User user
     
     static constraints = {
+        profilepic nullable:true, blank:true
         name unique:true
         description nullable: true, blank: true
         establishedDate nullable: true, blank: true

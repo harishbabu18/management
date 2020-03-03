@@ -1,0 +1,7 @@
+import company.Offering
+
+model {
+	Offering offering
+}
+
+json g.render(offering, [resolveTemplate: false])
